@@ -1,0 +1,136 @@
+#!/bin/bash
+clear
+
+PG_Version='1.0.1'
+
+if [ $1 == -1 ]
+then
+for i in {0..9}
+do
+echo "$i" 
+done
+fi
+
+if [ $1 == -2 ]
+then
+for i in {00..99}
+do
+echo "$i"
+done
+fi
+
+if [ $1 == -3 ]
+then
+for i in {000..999}
+do
+echo "$i"
+done
+fi
+
+if [ $1 == -4 ]
+then
+for i in {0000..9999}
+do
+echo "$i"
+done
+fi
+
+if [ $1 == -5 ]
+then
+for i in {00000..99999}
+do
+echo "$i"
+done
+fi
+
+if [ $1 == -6 ]
+then
+for i in {000000..999999}
+do
+echo "$i"
+done
+fi
+
+if [ $1 == -7 ]
+then
+for i in {0000000..9999999}
+do
+echo "$i"
+done
+fi
+
+if [ $1 == -8 ]
+then
+for i in {00000000..99999999}
+do
+echo "$i"
+done
+fi
+
+if [ $1 == -9 ]
+then
+for i in {000000000..999999999}
+do
+echo "$i"
+done
+fi
+
+if ! [ $1 = -1 ] && ! [ $1 = -2 ] && ! [ $1 = -3 ] && ! [ $1 = -4 ] && ! [ $1 = -5 ] && ! [ $1 = -6 ] && ! [ $1 = -7 ] && ! [ $1 = -8 ] && ! [ $1 = -v ]
+then
+echo -e "\e[35m__________________________\e[35m"
+echo -e "\e[35mWrong Syntax or Invalid Option: "'"'$1'"'"\e[35m"
+echo -e "\e[35mUsage: PinGen "[-1..9]" "[-h]" "[-v]"\e[35m"
+echo -e "\e[35mUse PinGen -h for Help\e[35m"
+fi
+
+if [ $1 == -v ]
+then
+echo -e "\e[35m__________________________\e[35m"
+echo -e "\e[35mCurrent Version:\e[35m"
+echo "$PG_Version"
+echo __________________________
+fi
+
+if [ $1 == -h ] || [ $1 == "--help" ]
+then
+clear
+echo
+echo -e "\e[1;35m\e[1;35m"
+echo '  ______   ________  ___   __    _______    ______   ___   __      '
+echo ' /_____/\ /_______/\/__/\ /__/\ /______/\  /_____/\ /__/\ /__/\    '
+echo ' \:::_ \ \\__.::._\/\::\_\\  \ \\::::__\/__\::::_\/_\::\_\\  \ \   '
+echo '  \:(_) \ \  \::\ \  \:. `-\  \ \\:\ /____/\\:\/___/\\:. `-\  \ \  '
+echo '   \: ___\/  _\::\ \__\:. _    \ \\:\\_  _\/ \::___\/_\:. _    \ \ '
+echo '    \ \ \   /__\::\__/\\. \`-\  \ \\:\_\ \ \  \:\____/\\. \`-\  \ \'
+echo '     \_\/   \________\/ \__\/ \__\/ \_____\/   \_____\/ \__\/ \__\/'
+echo
+echo
+echo -e "\e[1;35m__________________________________PinGen_____________________________________\e[35m"
+echo 
+echo
+echo This is the Help Menu from PinGen.
+echo
+echo Version: $PG_Version
+echo
+echo PinGen: PinGen "[-1..9]" "[-h]" "[-v]"
+echo
+echo "	" Generates a list of number combinations
+echo "	" for example: "000" 001 002 003 004 ...
+echo "	" you can use pipe it maybe to aircrack-ng
+echo "	" or a program that uses number combinations
+echo				
+echo -------------------------------
+echo	
+echo Options:
+echo ""-1..9 "  "Specifies the number of Digits
+echo	
+echo "	" If you want to save it to a file please
+echo "	" add '(for example)' '"> /home/user/Desktop/name.txt"' 
+echo "	" to the end of the command
+echo	
+echo
+echo ""-v"       ""show's" the current version of PinGen
+echo
+echo ""-h"       ""show's" this Help Menu
+echo
+fi
