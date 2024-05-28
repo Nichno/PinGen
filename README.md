@@ -1,9 +1,3 @@
-# PinGen
-#
-# you need to use git clone and then start the file with with name Instalation with root access
-#
-#
-#
-#
-#
-#
+PinGen
+A Tool to generate A list from High to low numbers. 
+You can set the amount of Characters by typing pingen -1-9
